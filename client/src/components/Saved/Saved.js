@@ -1,27 +1,31 @@
 import React from 'react';
+import { Container } from '../Grid';
 
 const Saved = props => (
-  <div className="container">
+  <Container>
     <li className="list-group-item">
       <h4>
         <span>
           <em>{props.title}</em>
         </span>
-        <span className="btn-group pull-right">
+        <span className="btn-group">
           <a href={props.url} target="_blank">
-            <button className="btn btn-default ">View Article</button>
+            <button type="button" className="btn btn-outline-secondary ">
+              View Article
+            </button>
           </a>
           <button
-            className="btn btn-primary"
+            type="button"
+            className="btn btn-outline-primary"
             onClick={() => props.handleDeleteButton(props._id)}
           >
-            Delete
+            Delete Article
           </button>
         </span>
       </h4>
       <p>Date Published: {props.date}</p>
     </li>
-  </div>
+  </Container>
 );
 
 export default Saved;

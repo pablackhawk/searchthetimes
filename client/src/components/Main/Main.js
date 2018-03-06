@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import Saved from './Saved';
-import Search from './Search';
-import Results from './Results';
-import API from '../utils/API';
+import Saved from '../Saved';
+import { Col, Row, Container } from '../Grid';
+import Jumbotron from '../Jumbotron';
+import Search from '../Search';
+import Results from '../Results';
+import API from '../../utils/API';
 
 class Main extends Component {
   state = {
@@ -92,7 +94,6 @@ class Main extends Component {
     const findArticleByID = this.state.articles.find(
       element => element._id === id
     );
-    console.log('findArticleByID: ', findArticleByID);
     const newSave = {
       title: findArticleByID.headline.main,
       date: findArticleByID.pub_date,
@@ -109,16 +110,16 @@ class Main extends Component {
   render() {
     return (
       <div className="main-container">
-        <div className="container">
+        <Container>
           {/* Jumbotron */}
-          <div className="jumbotron">
+          <Jumbotron>
             <h1 className="text-center">
               <strong>New York Times Article Search</strong>
             </h1>
             <h2 className="text-center">
               Search for and save articles of interest.
             </h2>
-          </div>
+          </Jumbotron>
           {/* Search Form and Results Section */}
           <Search
             handleTopicChange={this.handleTopicChange}
@@ -128,14 +129,14 @@ class Main extends Component {
             renderArticles={this.renderArticles}
           />
           {/* Saved Articles Section */}
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
+          <Container>
+            <Row>
+              <Col size="lg-12">
                 <div className="panel panel-primary">
                   <div className="panel-heading">
                     <h3 className="panel-title">
                       <strong>
-                        <i className="fa fa-download" aria-hidden="true" />{' '}
+                        <i className="fas fa-download" aria-hidden="true" />{' '}
                         Saved Articles
                       </strong>
                     </h3>
@@ -144,20 +145,24 @@ class Main extends Component {
                     <ul className="list-group">{this.renderSaved()}</ul>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </Col>
+            </Row>
+          </Container>
           <footer>
             <hr />
-            <p className="pull-right">
-              <a href="https://github.com/pablackhawk">
-                <i className="fab fa-github" aria-hidden="true" />
-              </a>
+            <p className="text-center">
               Copyright <i class="far fa-copyright" /> 2018 Laurentius
               Tirtarahardja. Built using React.js
+              <a href="https://github.com/pablackhawk">
+                <i
+                  id="github-link"
+                  className="fab fa-github"
+                  aria-hidden="true"
+                />
+              </a>
             </p>
           </footer>
-        </div>
+        </Container>
       </div>
     );
   }

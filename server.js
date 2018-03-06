@@ -48,7 +48,9 @@ router.get('/*', function(req, res) {
 app.use(router);
 
 // Connect mongoose to our database
-const db = process.env.MONGODB_URI || 'mongodb://localhost/nyt-react';
+const db =
+  'mongodb://heroku_7c95dbwg:t7vgdt53h2dmt0bccfjlr7mgi4@ds257808.mlab.com:57808/heroku_7c95dbwg' ||
+  'mongodb://localhost/nyt-react';
 mongoose.connect(db, function(error) {
   // Log any errors connecting with mongoose
   if (error) {

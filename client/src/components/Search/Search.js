@@ -1,9 +1,10 @@
 import React from 'react';
+import { Container, Row, Col } from '../Grid';
 
 const Search = props => (
-  <div className="container">
-    <div className="row">
-      <div className="col-lg-12">
+  <Container>
+    <Row>
+      <Col size="lg-12">
         <div className="panel panel-primary">
           <div className="panel-heading">
             <h3 className="panel-title">
@@ -52,14 +53,14 @@ const Search = props => (
             </form>
           </div>
         </div>
-      </div>
-    </div>
+      </Col>
+    </Row>
 
     <br />
     <br />
 
-    <div className="row">
-      <div className="col-lg-12">
+    <Row>
+      <Col size="lg-12">
         <div className="panel panel-primary">
           <div className="panel-heading">
             <h3 className="panel-title">
@@ -70,11 +71,11 @@ const Search = props => (
           </div>
           <div className="panel-body">{props.renderArticles()}</div>
         </div>
-      </div>
-    </div>
+      </Col>
+    </Row>
     <br />
     <br />
-  </div>
+  </Container>
 );
 
 export default Search;

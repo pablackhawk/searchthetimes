@@ -1,0 +1,33 @@
+// Variables
+$handwriting: 'Satisfy', cursive;
+$typing: 'Roboto Condensed', sans-serif;
+$blue: rgb(18, 15, 165);
+$lightgray: rgba(85, 83, 83, 0.8);
+
+body {
+  font-family: $typing;
+  color: $blue;
+  background-image: url('../images/desk.jpg');
+  object-fit: scale-down;
+}
+
+label {
+  margin-left: 15px;
+}
+
+.jumbotron {
+  color: $blue;
+  font-family: $handwriting;
+  margin-top: 20px;
+  background-image: url('../images/newspaper.jpg');
+}
+
+.btn-group {
+  position: relative;
+  left: 20px;
+}
+
+#github-link {
+  position: relative;
+  left: 4px;
+}
