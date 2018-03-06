@@ -1,0 +1,24 @@
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #120fa5;
+  background-image: url("../images/desk.jpg");
+  object-fit: scale-down; }
+
+label {
+  margin-left: 15px; }
+
+.jumbotron {
+  color: #120fa5;
+  font-family: "Satisfy", cursive;
+  margin-top: 20px;
+  background-image: url("../images/newspaper.jpg"); }
+
+.btn-group {
+  position: relative;
+  left: 20px; }
+
+#github-link {
+  position: relative;
+  left: 4px; }
+
+/*# sourceMappingURL=searchstyle.css.map */
