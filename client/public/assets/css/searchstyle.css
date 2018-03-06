@@ -2,7 +2,7 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   color: #120fa5;
   background-image: url("../images/desk.jpg");
-  object-fit: scale-down; }
+  object-fit: cover; }
 
 label {
   margin-left: 15px; }

@@ -1,4 +1,4 @@
-# Searchthetimes
+# Search the Times
 
 An article search for the New York Times
 
@@ -19,6 +19,10 @@ This application uses React to build a single page application which queries the
 * Node.js
 
 * Heroku
+
+* Mongoose
+
+* Express
 
 * MongoDB
 
