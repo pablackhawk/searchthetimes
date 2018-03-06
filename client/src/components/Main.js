@@ -89,7 +89,9 @@ class Main extends Component {
 
   // When save article button is clicked, add article to db
   handleSaveButton = id => {
-    const findArticleByID = this.state.articles.find(el => el._id === id);
+    const findArticleByID = this.state.articles.find(
+      element => element._id === id
+    );
     console.log('findArticleByID: ', findArticleByID);
     const newSave = {
       title: findArticleByID.headline.main,
@@ -148,8 +150,11 @@ class Main extends Component {
           <footer>
             <hr />
             <p className="pull-right">
-              <i className="fab fa-github" aria-hidden="true" />
-              Proudly built using React.js
+              <a href="https://github.com/pablackhawk">
+                <i className="fab fa-github" aria-hidden="true" />
+              </a>
+              Copyright <i class="far fa-copyright" /> 2018 Laurentius
+              Tirtarahardja. Built using React.js
             </p>
           </footer>
         </div>
